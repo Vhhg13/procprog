@@ -1,0 +1,24 @@
+#!/bin/bash
+
+tst () {
+    echo
+    echo $1
+    echo $1 | ./z4
+}
+
+tst '1 2 3'
+tst '1 4 4'
+tst '0 0 0'
+tst '0 0 1'
+tst '0 1 0'
+tst '1 0 0'
+tst '1 1 0'
+tst '0 1 1'
+tst '0.5 3 4.5'
+tst '0 0.5 0.5'
+tst '-1 -4 -4'
+tst '1 -4 4'
+tst '1 -4 -4'
+tst '100 0 0'
+tst '0 100 0'
+tst '0 0 100'

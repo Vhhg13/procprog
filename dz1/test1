@@ -1,0 +1,13 @@
+#!/bin/bash
+
+tst () {
+    echo
+    echo $1 $2
+    echo $1 | ./z1
+}
+
+#  h R r l
+# π
+tst '3 4 0 5' '()'
+tst '3 7 3 5' '()'
+tst '1 2 3 4' '()'

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+tst () {
+    echo
+    echo $1
+    echo $1 | ./z3
+}
+
+tst '0 0'
+tst '0 1'
+tst '0 100'
+tst '1 0'
+tst '1 1'
+tst '12 3'
+tst '3 5'
+tst '9 1'
+tst '-12 3'
+tst '12 -3'

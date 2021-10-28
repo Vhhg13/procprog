@@ -1,0 +1,22 @@
+#!/bin/bash
+gcc z9.c -o z9 -lm -g
+
+if [ "$?" = "1" ]
+then
+    echo "Error compiling"
+    exit
+fi
+echo "Program recompiled"
+
+tst () {
+    echo
+    echo $1 ' | ' $2
+    echo $1 | ./z9
+}
+
+tst '1A 16' '26'
+tst '11 10' '11'
+tst '10 8' '8'
+tst '11 12' '13'
+tst '0 10' '0'
+tst '0 1' '0'

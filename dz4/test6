@@ -1,0 +1,106 @@
+#!/bin/bash
+
+tst () {
+    [[ "$(echo $1 | ./z6)" = "$2" ]] || echo  "$1 != $2"
+}
+
+tst 'I' '1'
+
+
+tst 'II' '2'
+
+
+tst 'III' '3'
+
+
+tst 'IIII' 'Корявое число'
+
+
+tst 'IV' '4'
+
+
+tst 'IIV' 'Корявое число'
+
+
+tst 'VI' '6'
+
+
+tst 'VII' '7'
+
+
+tst 'IVI' 'Корявое число'
+
+
+tst 'IVII' 'Корявое число'
+
+
+tst 'IVX' 'Корявое число'
+
+
+tst 'VV' 'Корявое число'
+
+
+tst 'VX' 'Корявое число'
+
+
+tst 'XV' '15'
+
+
+tst 'IVX' 'Корявое число'
+
+
+tst 'VIX' 'Корявое число'
+
+
+tst 'IXV' 'Корявое число'
+
+
+tst 'XIV' '14'
+
+
+tst 'XVI' '16'
+
+
+tst 'XVII' '17'
+
+
+tst 'XIX' '19'
+
+
+tst 'XXIX' '29'
+
+
+tst 'XXXIX' '39'
+
+
+tst 'XL' '40'
+
+
+tst 'XLV' '45'
+
+
+tst 'IL' 'Корявое число'
+
+
+tst 'XLIX' '49'
+
+
+tst 'CX' '110'
+
+
+tst 'XC' '90'
+
+
+tst 'CXC' '190'
+
+
+tst 'CLXL' 'Корявое число'
+
+
+tst 'MLDC' 'Корявое число'
+
+
+tst 'MMDCCXLIX' '2749'
+
+
+tst 'IX' '9'

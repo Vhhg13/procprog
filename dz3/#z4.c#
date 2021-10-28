@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(void){
+  FILE *fp=fopen("file.txt", "r");
+  char prev=0;
+  char ch=fgetc(fp);
+  while(ch!=EOF){
+    if(48<=ch && ch<=57)
+      putchar(ch);
+    else if(48<=prev && prev<=75)
+      putchar((ch==10) ? 10 : ' ');
+    else if(ch==10)
+      putchar(10);
+    prev=ch;
+    ch=fgetc(fp);
+  }
+
+  
+  fclose(fp);
+  return 0;
+}

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+for i in $(seq -5 5)
+do
+    for j in $(seq 0 9)
+    do
+	for k in $(seq -5 5)
+	do
+	    for l in $(seq 0 9)
+	    do
+		res=$(echo "$i.$j $k.$l" | ./z2)
+		if [ "$?" = "0" ]
+		then
+		    #		    echo "$i.$j $k.$l"  ' | ' $res
+		    # if $?=0
+		    echo "$i.$j $k.$l"  ' | ' $res
+		fi
+	    done
+	done
+    done
+done

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+tst () {
+    echo $1
+    echo $1 | ./z2
+}
+
+tst '1 2'
+tst '2 3'
+tst '0 0'
+tst '0 1'
+tst '1 0'
+tst '12 3'
+tst '3 12'
+tst '12 5'
+tst '100 0'
+tst '100 100'
+tst '1 1'
+tst '199 200'

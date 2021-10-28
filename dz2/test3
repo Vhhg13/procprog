@@ -1,0 +1,30 @@
+#!/bin/bash
+
+tst () {
+    echo
+    echo $1 $2
+    echo $1 | ./z3
+}
+
+for i in $(seq 0 5)
+do
+    for j in $(seq 0 5)
+    do
+	for k in $(seq 0 5)
+	do
+	    for l in $(seq 0 9)
+	    do
+		res=$(echo "$i.$l $j $k.$l" | ./z3)
+		if [ "$?" = "0" ]
+		then
+		    echo $res ' | ' $i.$l $j $k.$l
+		fi
+	    done
+	done
+    done
+done
+echo
+tst '0 0 0'
+tst '1 1 1'
+tst '2 2 2'
+tst '-1 -1 -1'
