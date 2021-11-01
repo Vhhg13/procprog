@@ -13,7 +13,8 @@ float rectangle(float a, float b){
 
 float triangle(float a, float b, float c){
   float p=(a+b+c)/2;
-  return sqrt(p*(p-a)*(p-b)*(p-c));
+  float tmp=p*(p-a)*(p-b)*(p-c);
+  return tmp<0 ? -1 : sqrt(tmp);
 }
 
 int main(void){
@@ -36,14 +37,14 @@ int main(void){
     if(a<0 || b<0)
       printf("Длина не может быть отрицательной\n");
     else
-      printf("Площадь круга = %f\n", rectangle(a, b));
+      printf("Площадь прямоугольника = %f\n", rectangle(a, b));
     break;
   case 3:
     printf("Введите длины всех сторон треугольника\n");
     float a, b, c;
     scanf("%f %f %f", &a, &b, &c);
-    if(a<0 || b<0 || c<0)
-      printf("Длина не может быть отрицательной\n");
+    if(a<0 || b<0 || c<0 || triangle(a, b, c)==-1)
+      printf("Такого треугольника не существует\n");
     else
       printf("Площадь треугольника = %f\n", triangle(a, b, c));
     break;
