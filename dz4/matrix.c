@@ -24,15 +24,6 @@ int main(void){
       C[i][j]=res;
     }
   
-  /* for(int i=0;i<C_i;++i){ */
-  /*   for(int j=0;j<C_j;++j) */
-  /*     printf("%.1f ", C[i][j]); */
-  /*   putchar(10); */
-  /* } */
-  /* putchar(10); */
-
-
-  
   // 1
   float mx=0, mn=1000;
   int ind_min, ind_max;

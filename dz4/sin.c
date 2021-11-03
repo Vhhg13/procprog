@@ -7,9 +7,9 @@ _Bool eq(double s, double y){
   return fabs(s-y)<=tolerance;
 }
 
-/* double f(double x){ */
-/*   return (x-3)*(x-4)-0.5; */
-/* } */
+double fun(double x){
+  return sin(0.5*x);
+}
 
 int main(void){
   for(double y=15;y>-15;--y){
@@ -21,7 +21,7 @@ int main(void){
 	if(x==0 || x==1)
 	  putchar('#');
 	else
-	  putchar(eq(sin(x/10),y/15) ? '*' : ' ');
+	  putchar(eq(fun(x/10),y/15) ? '*' : ' ');
     printf("\n");
   }
   return 0;

@@ -43,6 +43,7 @@ int main(void){
   rom['C']=100; rom['D']=500;
   rom['M']=1000; rom[0]=0;
   char inp[200];
+  printf("Введите римское число\n");
   scanf("%s", inp);
 
   for(int i=0;inp[i]!=0;++i)
