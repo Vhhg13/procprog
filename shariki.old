@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+/* int factorial(int num){ */
+/*   int res=1; */
+/*   for(int i=1;i<=num;++i) */
+/*     res*=i; */
+/*   return res; */
+/* } */
+
+_Bool in(char ch, char *str){
+  for(int i=0;str[i]!=0;++i)
+    if(ch==str[i]) return 1;
+  return 0;
+}
+
+_Bool aldif(char *str){
+  if(str[0]==0) return 1;
+  return !in(str[0], str+1) && aldif(str+1);
+}
+
+_Bool fun(char* str){
+  for(int i=0;str[i]!=0;++i)
+    if(str[i]==i+1+48) return 1;
+  return 0;
+}
+
+int main(void){
+  int n=10, z=0;
+  char buf[n+1];
+  buf[4]=0;
+  /* for(buf[0]='1';buf[0]<'5';++buf[0]) */
+  /*   for(buf[1]='1';buf[1]<'5';++buf[1]) */
+  /*     for(buf[2]='1';buf[2]<'5';++buf[2]) */
+  /* 	for(buf[3]='1';buf[3]<'5';++buf[3]){ */
+  /* 	  if(aldif(buf) && fun(buf)) puts(buf); */
+  /* 	} */
+
+  
+
+  
+  
+  /* int result=factorial(n-1)+(n-1)*z; */
+  /* printf("%d\n", result); */
+  return 0;
+}

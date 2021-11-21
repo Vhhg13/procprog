@@ -1,0 +1,16 @@
+#!/bin/bash
+
+tst () {
+    echo
+    echo "$1"
+    echo "| $2"
+    echo $1 | ./rows67
+}
+
+tst '3
+11 10 0
+3' '10 2 0'
+
+tst '0
+12 13
+1' ''

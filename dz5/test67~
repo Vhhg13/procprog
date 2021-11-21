@@ -1,0 +1,7 @@
+#!/bin/bash
+
+tst () {
+    echo
+    echo "$1 | $2"
+    echo $1 | ./rows67
+}
