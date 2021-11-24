@@ -1,0 +1,5 @@
+#!/bin/bash
+
+tst () {
+    [ "$(echo $1 | ./z2 | bc)" = "$1" ] || echo "ERROR $1"
+}

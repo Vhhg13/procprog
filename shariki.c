@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+typedef int shar;
 
 void swap(int* n1, int* n2){
   *n1+=*n2;
@@ -12,8 +14,6 @@ int factorial(int num){
     res*=i;
   return res;
 }
-
-typedef int shar;
 
 _Bool in(shar sh, shar * shary){
   for(int i=0;shary[i]!=0;++i)
@@ -48,16 +48,25 @@ void heaps(int k, shar* A, int* z, int n){
 }
 
 int main(void){
-  int z=0, n=10;
-  shar shary[n-1];
+  int z=0, n;
+
+  printf("Введите n\n");
+  scanf("%d", &n);
+  if(n==1){
+    printf("1\n");
+    return 0;
+  }
+
+  shar shary[n];
   shary[0]=1;
   for(int i=3;i<=n;++i)
     shary[i-2]=i;
+  shary[n-1]=0;
   heaps(n-1, shary, &z, n-1);
   
     
   
   int result=factorial(n-1)+(n-1)*z;
-  printf("z=%d\nresult=%d\n", z, result);
+  printf("%d\n", result);
   return 0;
 }
