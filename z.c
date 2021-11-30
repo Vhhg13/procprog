@@ -2,8 +2,10 @@
 #include <stdlib.h>
 
 int main(void){
-  int *a;
-  a=(int*)malloc(0);
+  FILE* fp=fopen("bna.txt", "r");
+  char buff[100];
+  scanf("%s", buff);
+  
+  fclose(fp);
   return 0;
-  a[1]=1;
 }
