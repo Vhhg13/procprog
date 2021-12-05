@@ -1,15 +1,15 @@
 #include <stdio.h>
 
-typedef struct rect {
-  int a, b, x, y;
-} rect;
-
-_Bool fits(int n, int m, rect R){
-  
-}
-
 int main(void){
-  int M, N;
+  int N, M;
   scanf("%d %d", &N, &M);
-  
+  int res=0;
+  int ny, nx;
+  for(int x=0;x<N;++x)
+    for(int y=0;y<M;++y){
+      nx=N-x;
+      ny=M-y;
+      res+=ny*nx;
+    }
+  printf("%d\n", res);
 }

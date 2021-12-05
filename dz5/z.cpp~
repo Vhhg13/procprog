@@ -1,0 +1,11 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(void){
+  string buff;
+  cin.getline(buff, 200);
+  printf("%d\n", buff[0]);
+
+  return 0;
+}

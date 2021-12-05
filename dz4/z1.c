@@ -15,24 +15,18 @@ int main(void){
 
   
   FILE * fp2=fopen("file.txt", "r");
-  char ch=fgetc(fp2);
-  int num=0;
-  int sum=0;
   printf("Содержимое файла:\n");
-  while(ch!=EOF){
-    if(ch!=' ')
-      num=num*10+(ch-48);
-    else{
-      sum+=num;
-      num=0;
-    }
-    
-    putchar(ch);
-    ch=fgetc(fp2);
+  
+  int res=0;
+  int tmp;
+  while(!feof(fp2)){
+    fscanf(fp2, "%d ", &tmp);
+    printf("%d ", tmp);
+    res+=tmp;
   }
 
   
-  printf("\nСумма чисел: %d\n", sum+num);
+  printf("\nСумма чисел: %d\n", res);
   fclose(fp2);
   return 0;
 }

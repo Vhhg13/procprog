@@ -15,17 +15,6 @@ int factorial(int num){
   return res;
 }
 
-_Bool in(shar sh, shar * shary){
-  for(int i=0;shary[i]!=0;++i)
-    if(sh==shary[i]) return 1;
-  return 0;
-}
-
-_Bool aldif(shar *shary){
-  if(shary[0]==0) return 1;
-  return !in(shary[0], shary+1) && aldif(shary+1);
-}
-
 _Bool fun(shar* shary, int n){
   for(int i=0;i<n;++i)
     if(shary[i]==i+2) return 1;
@@ -65,7 +54,6 @@ int main(void){
   heaps(n-1, shary, &z, n-1);
   
     
-  
   int result=factorial(n-1)+(n-1)*z;
   printf("%d\n", result);
   return 0;
